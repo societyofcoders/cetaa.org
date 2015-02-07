@@ -25,7 +25,6 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     uid = models.ForeignKey(User)
     body = models.TextField()
-    labels = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
