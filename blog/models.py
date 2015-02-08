@@ -26,8 +26,8 @@ class Post(models.Model):
     uid = models.ForeignKey(User)
     body = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(blank=False)
+    modified = models.DateTimeField(blank=False)
     status = models.IntegerField(choices=POST_STATUS)
 
     objects = EntryQuerySet.as_manager()

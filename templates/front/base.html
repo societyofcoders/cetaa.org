@@ -8,8 +8,7 @@
 <!-- CSS
 ================================================== -->
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{% static "public/" %}css/bootstrap.css">
-<link rel="stylesheet" href="{% static "public/" %}css/bootstrap-responsive.css">
+<link rel="stylesheet" href="{% static "public/" %}css/bootstrap.min.css">
 <link rel="stylesheet" href="{% static "public/" %}css/prettyPhoto.css" />
 <link rel="stylesheet" href="{% static "public/" %}css/flexslider.css" />
 <link rel="stylesheet" href="{% static "public/" %}css/custom-styles.css">
@@ -33,7 +32,7 @@
 <!-- JS
 ================================================== -->
 <script src="{% static "public/" %}js/jquery.min.js"></script>
-<script src="{% static "public/" %}js/bootstrap.js"></script>
+<script src="{% static "public/" %}js/bootstrap.min.js"></script>
 <script src="{% static "public/" %}js/jquery.prettyPhoto.js"></script>
 <script src="{% static "public/" %}js/jquery.flexslider.js"></script>
 
@@ -50,27 +49,27 @@
       
         <!-- Logo
         ================================================== -->
-        <div class="span5 logo">
+        <div class="col-lg-5 logo">
         	<a href="index.htm"><img src="{% static "public/" %}img/cetaa_logo.png" alt="" /></a>
             <h5></h5>
         </div>
         
         <!-- Main Navigation
         ================================================== -->
-        <div class="span7 navigation">
-            <div class="navbar hidden-phone">
+        <div class="col-lg-7 navigation">
+            <nav class="navbar navbar-default ">
             
-            <ul class="nav">
+            <ul class="nav nav-pills">
             <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">About CETAA <b class="caret"></b></a>
-                <ul class="dropdown-menu">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">About CETAA <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
                     <li><a href="index.html">A concise history of CETAA</a></li>
                     <li><a href="index-gallery.htm">Executive Committee</a></li>
                     
                 </ul>
             </li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Chapters <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Chapters <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="page-full-width.htm">CETAA Qatar</a></li>
                     <li><a href="page-right-sidebar.htm">CETAA Kuwait</a></li>
@@ -81,7 +80,7 @@
                 </ul>
             </li>
              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Awards <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Awards <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="gallery-3col.htm">General</a></li>
                     <li><a href="gallery-3col.htm">Electrical &amp; Electronics</a></li>
@@ -94,7 +93,7 @@
                 </ul>
              </li>
              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">GEMS <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">GEMS <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="blog-style1.htm">General Information</a></li>
                     <li><a href="blog-style1.htm">GEMS - Rules and Regulations</a></li>
@@ -107,11 +106,11 @@
              <li><a href="page-contact.htm">Gallery</a></li>
             </ul>
            
-            </div>
+            </nav>
 
             <!-- Mobile Nav
             ================================================== -->
-            <form action="#" id="mobile-nav" class="visible-phone">
+            <form action="#" id="mobile-nav" class="visible-xs">
                 <div class="mobile-nav-select">
                 <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
                     <option value="">Navigate...</option>
@@ -155,7 +154,7 @@
     
      	<!-- Slider Carousel
         ================================================== -->
-        <div class="span8">
+        <div class="col-lg-8">
             <div class="flexslider">
               <ul class="slides">
                 <li><a href="gallery-single.htm"><img src="{% static "public/" %}img/gallery/3.jpg" alt="slider" /></a></li>
@@ -168,7 +167,7 @@
         
         <!-- Headline Text
         ================================================== -->
-        <div class="span4">
+        <div class="col-lg-4">
         	<h3>CETAA</h3>
             
             <p>Formed in 1976 with the aim of establishing rapport with former students and the college and to have common programs which will be mutually beneficial.</p>
@@ -179,21 +178,21 @@
     
     <div class="row gallery-row"><!-- Begin Gallery Row --> 
       
-    	<div class="span12">
+    	<div class="col-lg-12">
             <h5 class="title-bg">CONTRIBUTIONS
                 <small>from the batches</small>
-                <button class="btn btn-mini btn-inverse hidden-phone" type="button">View Portfolio</button>
+                <button class="btn small btn-inverse hidden-xs hidden-sm" type="button">View Portfolio</button>
             </h5>
     	
         <!-- Gallery Thumbnails
         ================================================== -->
 
-            <div class="row clearfix no-margin">
+            <div class="content clearfix no-margin">
             <ul class="gallery-post-grid holder">
 
                     <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -207,8 +206,8 @@
                     </li>
 
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -221,8 +220,8 @@
                    First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
                     </li>
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -235,8 +234,8 @@
                    First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
                     </li>
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -249,8 +248,8 @@
                    First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
                     </li>
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -263,8 +262,8 @@
                    First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
                     </li>
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -277,8 +276,8 @@
                    First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
                     </li>
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -291,8 +290,8 @@
                    First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
                     </li>
                         <!-- Gallery Item  -->
-                    <li  class="span3 gallery-item" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
+                        <span class="gallery-hover-4col hidden-xs hidden-sm">
                             <span class="gallery-icons">
                                 <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
                                 <a href="#" class="item-details-link"></a>
@@ -325,37 +324,31 @@
             <!-- Carousel items -->
             <div class="carousel-inner">
 
+
+            {% for post in posts %}
+
+
                  <!-- Blog Item 1 -->
-                <div class="active item">
+                <div class="item {% if forloop.counter == 1 %} active {%endif%}">
                     <a href="blog-single.htm"><img src="{% static "public/" %}img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
+                        <h4><a href="blog-single.htm">{{post.title}}</a></h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2015<li>
-                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-calendar"></i><strong>Posted on : </strong>{{post.created}}<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link"> {{post.uid}} </a><li>
                             <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
                             <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
                         </ul>
                     </div>
                     <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
                 </div>
+
+
+             {%endfor%}   
 
                 <!-- Blog Item 2 -->
-                 <div class="item">
-                    <a href="blog-single.htm"><img src="{% static "public/" %}img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
-                    <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">A great artist is always before his time</a></h4>
-                        <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2015<li>
-                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
-                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
-                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
-                        </ul>
-                    </div>
-                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
-                </div>
-
-                 <!-- Blog Item 3 -->
+              
+                 <!-- Blog Item 3 
                  <div class="item">
                     <a href="blog-single.htm"><img src="{% static "public/" %}img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
@@ -370,13 +363,14 @@
                     <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
                 </div>
                 
+                <!-- -->
             </div>
             </div> 	
         </div>
  <!--      
         <!-- Client Area
         ================================================== 
-        <div class="span6">
+        <div class="col-lg-6">
 
             <h5 class="title-bg">Recent Clients
                 <small>That love us</small>
@@ -418,7 +412,7 @@
 	<div class="footer-container"><!-- Begin Footer -->
     	<div class="container">
         	<div class="row footer-row">
-                <div class="span3 footer-col">
+                <div class="col-lg-3 footer-col">
                    <h5>    CONTACT US</h5>
                       <ul class="social-icons">
                         <li><a href="#" class="social-icon facebook"></a></li>
@@ -438,7 +432,7 @@
                     <p><a href="#">ONLINE REGISTRATION</a></p>
                 </div>
                 
-                <div class="span6 footer-col">
+                <div class="col-lg-6 footer-col">
                     <h5>B2C Programs</h5>
                      <ul class="post-list">
                         <li><a href="#">Sankar Krishnan</a></li>
@@ -451,7 +445,7 @@
                          <li>Dr. Sriram Ganapathy  </li>                       
                     </ul>
                 </div>
-                <div class="span3 footer-col">
+                <div class="col-lg-3 footer-col">
                     <h5>Gallery</h5>
                     <ul class="img-feed">
                         <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
@@ -474,7 +468,7 @@
     </div><!-- End Footer --> 
     
     <!-- Scroll to Top -->  
-    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    <div id="toTop" class="hidden-xs hidden-sm">Back to Top</div>
 
 
 
