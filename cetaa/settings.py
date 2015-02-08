@@ -26,17 +26,23 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+TEMPLATE_DIRS = [
+	os.path.join(BASE_DIR, 'templates')
+	]
 
 
 STATIC_URL = '/assets/'
 
-STATICFILES_DIRS = (
-    os.path.join(
-        os.path.dirname(__file__),
-        'assets',
-    ),
-)
+if DEBUG:
+	MEDIA_URL = '/media/'
+	STATIC_ROOT = os.path.join(BASE_DIR, "assets")
+	MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+	STATICFILES_DIRS = [
+	    os.path.join(BASE_DIR,'static-includes'),
+	#    os.path.join(os.path.dirname(__file__),"assets","public"),
+	#    os.path.join(os.path.dirname(__file__),"assets","public","css"),
+	#    os.path.join(os.path.dirname(__file__),'assets','admin'),
+	]
 
 
 
