@@ -2,3 +2,37 @@
 {%block title%}
 	{{title}}	
 {%endblock%}
+{%block main-content%}
+
+<div class="row">
+	<div class="col-lg-8">
+		{% for d in data%}
+		<div class="post-title">
+			<h2>{{d.post.title}}</h2>
+		</div>
+
+		<div class="post-body">
+			<p>
+			{{d.post.body}}
+			</p>
+			<div class="author-vcard">Posted by: {{d.post.uid}} on {{d.post.created}}</div>
+			<div class="labels">
+				<h6>Tagged Under : </h6>
+				{%for c in d.labels%}
+				<span class="label large label-info">
+					 {{c.label_id}}
+				</span>
+				{%endfor%}
+			</div>
+		</div>
+		{%endfor%}
+	</div>
+
+	<div class="col-lg-4">
+		<h4>
+		Sidebar
+		</h4>
+	</div>
+
+</div>
+{%endblock%}
