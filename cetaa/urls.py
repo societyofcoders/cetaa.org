@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^articles/',include('blog.urls')),
 	url(r'^$',views.index,name='index'),
+	url(r'^signup',views.signup,name='signup')
 )
 
 if settings.DEBUG:
