@@ -17,7 +17,7 @@ def signup(request):
 		pass
 	else:
 		if(check):
-			return HttpResponseRedirect('/')
+			return HttpResponseRedirect('account')
 	data = {'title':'Register for CETAA','success':0,'error':0}
 	try:
 		fname=request.POST['fname']
@@ -86,7 +86,7 @@ def login(request):
 				request.session['Logged in']=True
 				request.session['u_id'] =u.id 
 				data['success'] = 1
-				return HttpResponseRedirect('/')
+				return HttpResponseRedirect('account')
 			else:
 				data['error'] = 1
 				#return HttpResponse('Wrong password')
