@@ -53,7 +53,7 @@ class User(models.Model):
 	email = models.CharField(max_length=40)
 	phone = models.CharField(max_length=15)
 	contact	= models.IntegerField(max_length=1,choices=LO_CHOICES)			
-	username = models.CharField(max_length=20,unique=True)
+#	username = models.CharField(max_length=20,unique=True)
 	password = models.CharField(max_length=32)
 	prof_pic =models.ImageField(upload_to='static/user_img',blank=True)
 	admn_no = models.CharField(max_length=10)
