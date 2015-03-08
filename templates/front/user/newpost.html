@@ -11,29 +11,28 @@
 
 	<div class="col-md-8">
 		
-	<form action="newpost" method="POST">
-
-	<label>Post Title</label>
-	<input type="text" name="title" class="form-control">
-
-
-	<textarea name="body" class="form-control">
-
-	</textarea>
-
-	<label>SEO Url</label>
-	<input type="text" name="title" class="form-control">
+	<form action="post" class="" method="POST">
+	{% csrf_token %}
+	
+		<label>Post Title</label>
+		<input type="text" name="title" class="form-control">
 
 
-	<label>Status</label>
-	<select name="status" class="form-control">
-	<option value="0">Save as Draft</option>
-	<option value="1">Forward for approval</option>
-	</select>
+		<textarea name="body" class="form-control">
+		</textarea>
+
+		<label>SEO Url</label>
+		<input type="text" name="slug" class="form-control">
+
+
+		<label>Status</label>
+		<select name="status" class="form-control">
+			<option value="0">Save as Draft</option>
+			<option value="1">Forward for approval</option>
+		</select>
 
 	
-	<button class="btn btn-primary">Submit</button>
-
+		<button class="btn btn-primary">Submit</button>
 	</form>
 
 	</div>
