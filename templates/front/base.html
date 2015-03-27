@@ -1,509 +1,1107 @@
-{% load admin_static %}<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+{% load admin_static %}<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{% block title %}{{title}}{% endblock %}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="description" content="Responsive Bootstrap Multi-Purpose Landing Page Template">
+<meta name="keywords" content="LandX, Bootstrap, Landing page, Template, Registration, Landing">
+<meta name="author" content="Mizanur Rahman">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- CSS
-================================================== -->
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{% static "public/" %}css/bootstrap.min.css">
-<link rel="stylesheet" href="{% static "public/" %}css/prettyPhoto.css" />
-<link rel="stylesheet" href="{% static "public/" %}css/flexslider.css" />
-<link rel="stylesheet" href="{% static "public/" %}css/custom-styles.css">
+<!-- SITE TITLE -->
+<title>LandX - Responsive Multi-Purpose Landing Page</title>
+
+<!-- =========================
+      FAV AND TOUCH ICONS  
+============================== -->
+<link rel="icon" href="assets/public/images/favicon.ico">
+<link rel="apple-touch-icon" href="assets/public/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/public/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/public/images/apple-touch-icon-114x114.png">
+
+<!-- =========================
+     STYLESHEETS   
+============================== -->
+<!-- BOOTSTRAP -->
+<link rel="stylesheet" href="assets/public/css/bootstrap.min.css">
+
+<!-- FONT ICONS -->
+<!-- IonIcons -->
+<link rel="stylesheet" href="assets/public/ionicons/css/ionicons.css">
+
+<!-- Font Awesome 
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+-->
+
+<!-- Elegant Icons -->
+<link rel="stylesheet" href="assets/public/elegant-icons/style.css">
+<!--[if lte IE 7]><script src="assets/elegant-icons/lte-ie7.js"></script><![endif]-->
+
+
+
+<!-- CAROUSEL AND LIGHTBOX -->
+<link rel="stylesheet" href="assets/public/css/owl.theme.css">
+<link rel="stylesheet" href="assets/public/css/owl.carousel.css">
+<link rel="stylesheet" href="assets/public/css/nivo-lightbox.css">
+<link rel="stylesheet" href="assets/public/css/nivo_themes/default/default.css">
+
+<!-- COLORS -->
+<link rel="stylesheet" href="assets/public/css/colors/blue.css"> <!-- DEFAULT COLOR/ CURRENTLY USING -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/red.css"> -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/green.css"> -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/purple.css"> -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/orange.css"> -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/blue-munsell.css"> -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/slate.css"> -->
+<!-- <link rel="stylesheet" href="assets/public/css/colors/yellow.css"> -->
+
+<!-- CUSTOM STYLESHEETS -->
+<link rel="stylesheet" href="assets/public/css/styles.css">
+
+<!-- RESPONSIVE FIXES -->
+<link rel="stylesheet" href="assets/public/css/responsive.css">
+
+<!--[if lt IE 9]>
+			<script src="assets/public/js/html5shiv.js"></script>
+			<script src="assets/public/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- ****************
+      After neccessary customization/modification, Please minify HTML/CSS according to http://browserdiet.com/en/ for better performance
+     **************** -->
+
+
 
 {%block stylesheet%}
 
 {%endblock%}
-
-<!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link rel="stylesheet" href={% static "public/" %}css/style-ie.css"/>
-<![endif]--> 
-
-<!-- Favicons
-================================================== -->
-<link rel="shortcut icon" href="{% static "public/" %}img/favicon.ico">
-<link rel="apple-touch-icon" href="{% static "public/" %}img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="{% static "public/" %}img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="{% static "public/" %}img/apple-touch-icon-114x114.png">
-
-<!-- JS
-================================================== -->
-<script src="{% static "public/" %}js/jquery.min.js"></script>
-<script src="{% static "public/" %}js/bootstrap.min.js"></script>
-<script src="{% static "public/" %}js/jquery.prettyPhoto.js"></script>
-<script src="{% static "public/" %}js/jquery.flexslider.js"></script>
-
+     
 </head>
 
-<body class="home">
-    <!-- Color Bars (above header)-->
-	<div class="color-bar-1"></div>
-    <div class="color-bar-2 color-bg"></div>
-    
-    <div class="container">
-    
-      <div class="row header"><!-- Begin Header -->
-      
-        <!-- Logo
-        ================================================== -->
-        <div class="col-lg-5 logo">
-        	<a href="index.htm"><img src="{% static "public/" %}img/cetaa_logo.png" alt="" /></a>
-            <h5></h5>
-        </div>
-        
-        <!-- Main Navigation
-        ================================================== -->
-        <div class="col-lg-7 navigation">
-            <nav class="navbar navbar-default ">
-            
-            <ul class="nav nav-pills">
-            <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">About CETAA <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="index.html">A concise history of CETAA</a></li>
-                    <li><a href="index-gallery.htm">Executive Committee</a></li>
-                    
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Chapters <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="page-full-width.htm">CETAA Qatar</a></li>
-                    <li><a href="page-right-sidebar.htm">CETAA Kuwait</a></li>
-                    <li><a href="page-left-sidebar.htm">CETAA UAE</a></li>
-                    <li><a href="page-double-sidebar.htm">Delhi</a></li>
-                    <li><a href="page-double-sidebar.htm">CETAA Bangalore</a></li>
-                    <li><a href="page-double-sidebar.htm">Kozhikode</a></li>
-                </ul>
-            </li>
-             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Awards <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="gallery-3col.htm">General</a></li>
-                    <li><a href="gallery-3col.htm">Electrical &amp; Electronics</a></li>
-                    <li><a href="gallery-3col.htm">Civil</a></li>
-                    <li><a href="gallery-3col.htm">Mechanical</a></li>
-                    <li><a href="gallery-3col.htm">Electronics</a></li>
-                    <li><a href="gallery-3col.htm">Computer Sc</a></li>
-                    <li><a href="gallery-3col.htm">M B A</a></li>
-                    <li><a href="gallery-3col.htm">Architecture</a></li>                   
-                </ul>
-             </li>
-             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">GEMS <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="blog-style1.htm">General Information</a></li>
-                    <li><a href="blog-style1.htm">GEMS - Rules and Regulations</a></li>
-                    <li><a href="blog-style1.htm">Contributors</a></li>
-                    <li><a href="blog-style1.htm">GEMS Scholarship 2012-13</a></li>                  
-                </ul>
-             </li>
-             <li><a href="page-contact.htm">Forum</a></li>
-             <li><a href="page-contact.htm">Contact</a></li>
-             <li><a href="page-contact.htm">Gallery</a></li>
-             <li><a href="signup">Sign Up</a></li>
-            </ul>
-           
-            </nav>
 
-            <!-- Mobile Nav
-            ================================================== -->
-            <form action="#" id="mobile-nav" class="visible-xs">
-                <div class="mobile-nav-select">
-                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
-                    <option value="">Navigate...</option>
-                    <option value="index.htm">Home</option>
-                        <option value="index.htm">- Full Page</option>
-                        <option value="index-gallery.htm">- Gallery Only</option>
-                        <option value="index-slider.htm">- Slider Only</option>
-                    <option value="features.htm">Features</option>
-                    <option value="page-full-width.htm">Pages</option>
-                        <option value="page-full-width.htm">- Full Width</option>
-                        <option value="page-right-sidebar.htm">- Right Sidebar</option>
-                        <option value="page-left-sidebar.htm">- Left Sidebar</option>
-                        <option value="page-double-sidebar.htm">- Double Sidebar</option>
-                    <option value="gallery-4col.htm">Gallery</option>
-                        <option value="gallery-3col.htm">- 3 Column</option>
-                        <option value="gallery-4col.htm">- 4 Column</option>
-                        <option value="gallery-6col.htm">- 6 Column</option>
-                        <option value="gallery-4col-circle.htm">- Gallery 4 Col Round</option>
-                        <option value="gallery-single.htm">- Gallery Single</option>
-                    <option value="blog-style1.htm">Blog</option>
-                        <option value="blog-style1.htm">- Blog Style 1</option>
-                        <option value="blog-style2.htm">- Blog Style 2</option>
-                        <option value="blog-style3.htm">- Blog Style 3</option>
-                        <option value="blog-style4.htm">- Blog Style 4</option>
-                        <option value="blog-single.htm">- Blog Single</option>
-                    <option value="page-contact.htm">Contact</option>
-                </select>
-                </div>
-                </form>
 
-        </div>
-        
-      </div><!-- End Header -->
+<body>
+<!-- =========================
+     PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
 
+<!-- =========================
+     HEADER   
+============================== -->
+<header id="home">
+
+<!-- COLOR OVER IMAGE -->
+<div class="color-overlay">
+	
+	<div class="navigation-header">
+		
+		<!-- STICKY NAVIGATION -->
+		<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
+			<div class="container">
+				<div class="navbar-header">
+					
+					<!-- LOGO ON STICKY NAV BAR -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#landx-navigation">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="assets/public/images/cetaa_logo.png" alt=""></a>
+					
+				</div>
+				
+				<!-- NAVIGATION LINKS -->
+				<div class="navbar-collapse collapse" id="landx-navigation">
+					<ul class="nav navbar-nav navbar-right main-navigation">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#section1">Features</a></li>
+						<li><a href="#section3">Brief</a></li>
+						<li><a href="#section4">Pricing</a></li>
+						<li><a href="#section5">Video</a></li>
+						<li><a href="#section6">Screenshots</a></li>
+						<li><a href="#section7">Testimonial</a></li>
+						<li><a href="#section8">Contact</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- /END CONTAINER -->
+			
+		</div>
+		
+		<!-- /END STICKY NAVIGATION -->
+		
+		<!-- ONLY LOGO ON HEADER -->
+		<div class="navbar non-sticky">
+			
+			<div class="container">
+				
+				<div class="navbar-header">
+					<img src="images/logo.png" alt="">
+				</div>
+				
+				<ul class="nav navbar-nav navbar-right social-navigation hidden-xs">
+					<li><a href="#"><i class="social_facebook_circle"></i></a></li>
+					<li><a href="#"><i class="social_twitter_circle"></i></a></li>
+					<li><a href="#"><i class="social_linkedin_circle"></i></a></li>
+				</ul>
+			</div>
+			<!-- /END CONTAINER -->
+			
+		</div>
+		<!-- /END ONLY LOGO ON HEADER -->
+		
+	</div>
+	
 
 
 {%block main-content%}
 
      
-    <div class="row headline"><!-- Begin Headline -->
-    
-     	<!-- Slider Carousel
-        ================================================== -->
-        <div class="col-lg-8">
-            <div class="flexslider">
-              <ul class="slides">
-                <li><a href="gallery-single.htm"><img src="{% static "public/" %}img/gallery/3.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="{% static "public/" %}img/gallery/5.jpg" alt="slider" /></a></li>
-                <li><a href="gallery-single.htm"><img src="{% static "public/" %}img/gallery/6.jpg" alt="slider" /></a></li>
-                
-              </ul>
-            </div>
-        </div>
-        
-        <!-- Headline Text
-        ================================================== -->
-        <div class="col-lg-4">
-        	<h3>CETAA</h3>
-            
-            <p>Formed in 1976 with the aim of establishing rapport with former students and the college and to have common programs which will be mutually beneficial.</p>
-            <p>CETAA now has about 15,000 members and is increasing every year. Now, CETAA has chapters at Chicago, Dubai, Delhi, Kuwait, Bangalore, America and Kochi.Instituting awards and scholarships to reward excellence in curricular and extra curricular activities has been one of the major activities of CETAA. CETAA day celebration is carried out every year during November.</p>
-            <a href="#">Read More</a> 
-        </div>
-    </div><!-- End Headline -->
-    
-    <div class="row gallery-row"><!-- Begin Gallery Row --> 
-      
-    	<div class="col-lg-12">
-            <h5 class="title-bg">CONTRIBUTIONS
-                <small>from the batches</small>
-                <button class="btn small btn-inverse hidden-xs hidden-sm" type="button">View Portfolio</button>
-            </h5>
-    	
-        <!-- Gallery Thumbnails
-        ================================================== -->
 
-            <div class="content clearfix no-margin">
-            <ul class="gallery-post-grid holder">
+	
+	<!-- HEADING, FEATURES AND REGISTRATION FORM CONTAINER -->
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="col-md-6">
+			
+			<!-- SCREENSHOT -->
+			<div class="home-screenshot side-screenshot pull-left">
+				<img src="images/screenshots/1.jpg" alt="Feature" class="img-responsive">
+			</div>
+			
+		</div>
+			
+			<!-- RIGHT - HEADING AND TEXTS -->
+			<div class="col-md-6 intro-section">
+				
+				<h1 class="intro text-left">
+				Get the Best <span class="strong colored-text">Solution</span> for Your <strong>Business</strong>
+				</h1>
+				
+				<p class="sub-heading text-left">
+				    Tablet publishing HTML5 mobile first really simple syndication meetups white board walls. User experience iterate algorithm gamification semantic web value add market research stealth. Rockstar developer internet of things bleeding edge.
+				</p>
+				
+				<!-- CTA BUTTONS -->
+				<div id="cta-5" class="button-container">
+				
+				<a href="#section8" class="btn standard-button pull-left">Get Started</a>
+				<a href="#section1" class="btn secondary-button-white pull-left">Learn More</a>
+				
+				</div>
+				
+			</div>
 
-                    <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
+		</div>
+		
+	</div>
+	<!-- /END HEADING, FEATURES AND REGISTRATION FORM CONTAINER -->
+	
+</div>
 
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-                        <!-- Gallery Item  -->
-                    <li  class="col-lg-3 gallery-item thumbnail" data-id="id-1" data-type="illustration">
-                        <span class="gallery-hover-4col hidden-xs hidden-sm">
-                            <span class="gallery-icons">
-                                <a href="{% static "public/" %}img/gallery/va1.jpg" class="item-zoom-link lightbox" title="The work was completed at a cost of Rs.20 lakhs, funded and managed by batch members. " data-rel="prettyPhoto"></a>
-                                <a href="#" class="item-details-link"></a>
-                            </span>
-                        </span>
-                        <a href="#"><img src="{% static "public/" %}img/gallery/va1.jpg" alt="Gallery"></a>
-                        <span class="project-details"><a href="#"><p><br>
-                        <br><br>                       </p>
-                        <p class="lead">Sargam Renovated by the 1987 batch</p>
-                   First Entrance batch of CET - 1987, proudly handed over the renovated SARGAM premises in CET campus, as a token of love and affection to their alma mater. </a></span>
-                    </li>
-
-                   
-    </div><!-- End Gallery Row -->
-    
-    <div class="row"><!-- Begin Bottom Section -->
-    
-    	<!-- Blog Preview
-        ================================================== -->
-    	<div class="span=12">
-
-            <h5 class="title-bg">From the Blog 
-                <small>All the latest news</small>
-                <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
-                <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
-            </h5>
-
-        <div id="blogCarousel" class="carousel slide ">
-
-            <!-- Carousel items -->
-            <div class="carousel-inner">
+</header>
 
 
-            {% for post in posts %}
+<!-- =========================
+     SECTION 1   
+============================== -->
+<section class="section1" id="section1">
+
+<div class="container">
+	
+	<!-- SECTION HEADING -->
+	
+	<h2>LandX Features</h2>
+	
+	<div class="colored-line">
+	</div>
+	
+	<div class="sub-heading">
+		Term sheet convertible note colluding bootstrapping.
+	</div>
+	
+	<div class="features">
+		
+		<!-- FEATURES ROW 1 -->
+		<div class="row">
+			
+			<!-- SINGLE FEATURE BOX -->
+			<div class="col-md-4">
+				<div class="feature">
+					<div class="icon">
+						<span class="icon_compass_alt"></span>
+					</div>
+					<h4>Responsive Design</h4>
+					<p>
+						Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement.
+					</p>
+				</div>
+			</div>
+			
+			<!-- SINGLE FEATURE BOX -->
+			<div class="col-md-4">
+				<div class="feature">
+					<div class="icon">
+						<span class="icon_map_alt"></span>
+					</div>
+					<h4>350+ Font Icons</h4>
+					<p>
+						Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement.
+					</p>
+				</div>
+			</div>
+			
+			<!-- SINGLE FEATURE BOX -->
+			<div class="col-md-4">
+				<div class="feature">
+					<div class="icon">
+						<span class="icon_gift_alt"></span>
+					</div>
+					<h4>Built with Bootstrap 3.1</h4>
+					<p>
+						Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement.
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- FEATURES ROW 2 -->
+		<div class="row">
+			
+			<!-- SINGLE FEATURE BOX -->
+			<div class="col-md-4">
+				<div class="feature">
+					<div class="icon">
+						<span class="icon_adjust-vert"></span>
+					</div>
+					<h4>Easy to Customize</h4>
+					<p>
+						Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement.
+					</p>
+				</div>
+			</div>
+			
+			<!-- SINGLE FEATURE BOX -->
+			<div class="col-md-4">
+				<div class="feature">
+					<div class="icon">
+						<span class="icon_tags_alt"></span>
+					</div>
+					<h4>Lots of Variations</h4>
+					<p>
+						Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement.
+					</p>
+				</div>
+			</div>
+			
+			<!-- SINGLE FEATURE BOX -->
+			<div class="col-md-4">
+				<div class="feature">
+					<div class="icon">
+						<span class="icon_chat_alt"></span>
+					</div>
+					<h4>24/7 Chat Support</h4>
+					<p>
+						Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement.
+					</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+	
+</div> <!-- /END CONTAINER -->
+</section>
 
 
-                 <!-- Blog Item 1 -->
-                <div class="item {% if forloop.counter == 1 %} active {%endif%}">
-                    <a href="blog-single.htm"><img src="{% static "public/" %}img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
-                    <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">{{post.title}}</a></h4>
-                        <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on : </strong>{{post.created}}<li>
-                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link"> {{post.uid}} </a><li>
-                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
-                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
-                        </ul>
-                    </div>
-                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
-                </div>
+<!-- =========================
+     SECTION 2   
+============================== -->
+<section class="section2 bgcolor-2" id="section2">
+<div class="container">
+	
+	<div class="row">
+		
+		<div class="col-md-6">
+			
+			<!-- DETAILS WITH LIST -->
+			<div class="brief text-left">
+				
+				<!-- HEADING -->
+				<h2>Describe more about product</h2>
+				<div class="colored-line pull-left">
+				</div>
+				
+				<!-- TEXT -->
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+				</p>
+				
+				<!-- FEATURE LIST -->
+				<ul class="feature-list-2">
+					
+					<!-- FEATURE -->
+					<li>
+					<!-- ICON -->
+					<div class="icon-container pull-left">
+						<span class="icon_cog"></span>
+					</div>
+					<!-- DETAILS -->
+					<div class="details pull-left">
+						<h6>Easy to Customize</h6>
+						<p>
+							Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.
+						</p>
+					</div>
+					</li>
+					
+					<!-- FEATURE -->
+					<li>
+					<!-- ICON -->
+					<div class="icon-container pull-left">
+						<span class="icon_cart_alt"></span>
+					</div>
+					<!-- DETAILS -->
+					<div class="details pull-left">
+						<h6>Lorem Ipsum</h6>
+						<p>
+							Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.
+						</p>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="col-md-6">
+			<!-- SCREENSHOT -->
+			<div class="side-screenshot2 pull-right">
+				<img src="images/image-2.jpg" alt="Feature" class="img-responsive">
+			</div>
+		</div>
+		
+	</div> <!-- END ROW -->
+	
+</div> <!-- END CONTAINER -->
+
+</section>
 
 
-             {%endfor%}   
+<!-- =========================
+     SECTION 3   
+============================== -->
+<section class="section3" id="section3">
 
-                <!-- Blog Item 2 -->
-              
-                 <!-- Blog Item 3 
-                 <div class="item">
-                    <a href="blog-single.htm"><img src="{% static "public/" %}img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
-                    <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">Is art everything to anybody?</a></h4>
-                        <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2015<li>
-                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
-                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
-                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
-                        </ul>
-                    </div>
-                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
-                </div>
-                
-                <!-- -->
-            </div>
-            </div> 	
-        </div>
- <!--      
-        <!-- Client Area
-        ================================================== 
-        <div class="col-lg-6">
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-6">
+			
+			<!-- SCREENSHOT -->
+			<div class="side-screenshot pull-left">
+				<img src="images/image-1.jpg" alt="Feature" class="img-responsive">
+			</div>
+			
+		</div>
+		
+		<div class="col-md-6">
+			
+			<!-- DETAILS WITH LIST -->
+			<div class="brief text-left">
+				
+				<!-- HEADING -->
+				<h2>Explore the awesomeness</h2>
+				<div class="colored-line pull-left">
+				</div>
+				
+				<!-- TEXT -->
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+				</p>
+				
+				<!-- FEATURE LIST -->
+				<ul class="feature-list-2">
+					
+					<!-- FEATURE -->
+					<li>
+					<!-- ICON -->
+					<div class="icon-container pull-left">
+						<span class="icon_cog"></span>
+					</div>
+					<!-- DETAILS -->
+					<div class="details pull-left">
+						<h6>Easy to Customize</h6>
+						<p>
+							Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.
+						</p>
+					</div>
+					</li>
+					
+					<!-- FEATURE -->
+					<li>
+					<!-- ICON -->
+					<div class="icon-container pull-left">
+						<span class="icon_cart_alt"></span>
+					</div>
+					<!-- DETAILS -->
+					<div class="details pull-left">
+						<h6>Lorem Ipsum</h6>
+						<p>
+							Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.
+						</p>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div> <!-- /END DETAILS WITH LIST -->
+		
+	</div> <!-- END ROW -->
+	
+</div> <!-- END CONTAINER -->
 
-            <h5 class="title-bg">Recent Clients
-                <small>That love us</small>
-                <button id="btn-client-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
-                <button id="btn-client-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
-            </h5>
+</section>
 
-            <!-- Client Testimonial Slider-->
-            <div id="clientCarousel" class="carousel slide no-margin">
-            <!-- Carousel items -->
-            <div class="carousel-inner">
+<!-- =========================
+     SECTION 4   
+============================== -->
+<section class="section4 bgcolor-2" id="section4">
+<div class="container">
+	
+	<!-- SECTION HEADING -->
+	<h2>Packages</h2>
+	<div class="colored-line">
+	</div>
+	
+	<div class="sub-heading">
+		Term sheet convertible note colluding bootstrapping.
+	</div>
+	
+	<div class="pricing-table">
+		
+		<!-- PRICING TABLES -->
+		<div class="row">
+			
+			<!-- PACKAGE ONE -->
+			<div class="col-md-4">
+				<div class="package bgcolor-white">
+					<div class="header dark-bg">
+						<h3>Basic</h3>
+						<div class="sub-heading">
+							From <span class="colored-text strong">$39</span> per month
+						</div>
+					</div>
+					
+					<!-- PACKAGE FEATURES -->
+					<div class="package-features">
+						<ul>
+							<li>
+							<div class="column-9p">
+								Total Users
+							</div>
+							<div class="column-1p">
+								15
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Unlimited Styles
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Advance Protection
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Cloud Storage
+							</div>
+							<div class="column-1p">
+								<span class="icon_close"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								24/7 Customer Service
+							</div>
+							<div class="column-1p">
+								<span class="icon_close"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Backup Service
+							</div>
+							<div class="column-1p">
+								<span class="icon_close"></span>
+							</div>
+							</li>
+						</ul>
+						<div class="bottom-row">
+							<div class="column-7p">
+								<h6>$39 Per Month</h6>
+							</div>
+							<div class="column-3p">
+								<div id="cta-1">
+									<a href="#home" class="btn secondary-button">SIGN UP</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /END PACKAGE -->
+			
+			<!-- PACKAGE TWO -->
+			<div class="col-md-4">
+				<div class="package bgcolor-white">
+					<div class="header color-bg">
+						<h3>Premium</h3>
+						<div class="sub-heading">
+							From <span class=" strong">$59</span> per month
+						</div>
+					</div>
+					
+					<!-- PACKAGE FEATURES -->
+					<div class="package-features">
+						<ul>
+							<li>
+							<div class="column-9p">
+								Total Users
+							</div>
+							<div class="column-1p">
+								35
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Unlimited Styles
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Advance Protection
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Cloud Storage
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								24/7 Customer Service
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Backup Service
+							</div>
+							<div class="column-1p">
+								<span class="icon_close"></span>
+							</div>
+							</li>
+						</ul>
+						<div class="bottom-row">
+							<div class="column-7p">
+								<h6>$59 Per Month</h6>
+							</div>
+							<div class="column-3p">
+								<div id="cta-2">
+									<a href="#home" class="btn standard-button">SIGN UP</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /END PACKAGE -->
+			
+			<!-- PACKAGE THREE -->
+			<div class="col-md-4">
+				<div class="package bgcolor-white">
+					<div class="header dark-bg">
+						<h3>Ultimate</h3>
+						<div class="sub-heading">
+							From <span class="colored-text strong">$99</span> per month
+						</div>
+					</div>
+					
+					<!-- PACKAGE FEATURES -->
+					<div class="package-features">
+						<ul>
+							<li>
+							<div class="column-9p">
+								Unlimited Users
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Unlimited Styles
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Advance Protection
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Cloud Storage
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								24/7 Customer Service
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+							<li>
+							<div class="column-9p">
+								Backup Service
+							</div>
+							<div class="column-1p">
+								<span class="icon_check"></span>
+							</div>
+							</li>
+						</ul>
+						<div class="bottom-row">
+							<div class="column-7p">
+								<h6>$99 Per Month</h6>
+							</div>
+							<div class="column-3p">
+								<div id="cta-3">
+									<a href="#home" class="btn secondary-button">SIGN UP</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /END PACKAGE -->
+			
+			
+		</div> <!-- /END ROW -->
+	</div> <!-- /END ALL PACKAGE -->
+	
+</div> <!-- /END CONTAINER -->
 
-                <div class="active item">
-                    <p class="quote-text">"ANNOUNCEMENT"<cite>- By Person_name</cite></p>
-                </div>
+</section>
+<!-- =========================
+     SECTION 5   
+============================== -->
+<section class="section5" id="section5">
 
-            </div>
+<div class="container">
+	
+	<!-- SECTION HEADING -->
+	<h2>Watch Video</h2>
+	<div class="colored-line">
+	</div>
+	
+	<div class="sub-heading">
+		Term sheet convertible note colluding bootstrapping.
+	</div>
+	
+	<!-- VIDEO -->
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			
+			<div class="video-container">
+				
+                <!--
+				<div class="video">
+					
+					<iframe src="//player.vimeo.com/video/88902745?byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="338" frameborder="0" allowfullscreen>
+					</iframe> 
+				</div>
+				-->
+				
+				<div class="video">
+					
+					<iframe width="640" height="360" src="//www.youtube.com/embed/VjbGg-VuqbU?rel=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- FEATURES IN VIDEO SECTION -->
+	<div class="row video-features">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<h5>
+					<span class="ion-android-contacts colored-text inline-icon"></span> Trusted by 100+ users </h5>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<h5>
+					<span class="ion-android-earth colored-text inline-icon"></span> WorldWide Access </h5>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<h5>
+					<span class="ion-android-forums colored-text inline-icon"></span> 24/7 Chat Support </h5>
+				</div>
+			</div>
+		</div>
+	</div> <!-- /END FEATURES IN VIDEO SECTION -->
+	
+</div> <!-- /END CONTAINER -->
 
-            <!-- Client Logo Thumbs-->
-            
+</section>
 
-        </div>
-        
-    </div><!-- End Bottom Section -->
+<!-- =========================
+     SECTION 6   
+============================== -->
+<section class="section6 bgcolor-2" id="section6">
+<div class="container">
+	
+	<!-- SECTION HEADING -->
+	<h2>Screenshots</h2>
+	<div class="colored-line">
+	</div>
+	
+	<div class="sub-heading">
+		Term sheet convertible note colluding bootstrapping.
+	</div>
+	
+	<!-- SCREENSHOTS -->
+	<div class="row screenshots">
+		
+		<div id="screenshots" class="owl-carousel owl-theme">
+			
+			<div class="shot">
+				<a href="images/screenshots/1.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/1.jpg" alt="Screenshot"></a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/3.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/3.jpg" alt="Screenshot"></a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/2.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/2.jpg" alt="Screenshot"></a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/4.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/4.jpg" alt="Screenshot"></a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/1.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/1.jpg" alt="Screenshot"></a>
+			</div>
+			
+			<div class="shot">
+				<a href="images/screenshots/2.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/2.jpg" alt="Screenshot"></a>
+			</div>
+		</div>
+		
+	</div> <!-- /END SCREENSHOTS -->
+	
+</div> <!-- /END CONTAINER -->
+
+</section>
+
+<!-- =========================
+     SECTION 7  
+============================== -->
+<section class="section7" id="section7">
+<div class="container">
+	
+	<!-- SECTION HEADING -->
+	<h2>Trusted by Thousands</h2>
+	<div class="colored-line">
+	</div>
+	
+	<div class="sub-heading">
+		Term sheet convertible note colluding bootstrapping.
+	</div>
+	
+	<!-- CLIENTS -->
+	<div class="row clients">
+		<div class="col-md-12 col-sm-12">
+			<ul class="client-logos">
+				<li><a href=""><img src="images/clients/1.png" alt=""></a></li>
+				<li><a href=""><img src="images/clients/2.png" alt=""></a></li>
+				<li><a href=""><img src="images/clients/3.png" alt=""></a></li>
+				<li><a href=""><img src="images/clients/4.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- TESTIMONIALS -->
+	<div class="row testimonials">
+		
+		<!-- FEEDBACKS -->
+		<div id="feedbacks" class="owl-carousel owl-theme">
+			
+			<!-- SINGLE FEEDBACK -->
+			<div class="single-feedback">
+				<div class="client-pic">
+					<img src="images/client-pics/1.jpg" alt="">
+				</div>
+				<div class="box">
+					<p class="message">
+						 Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding.
+					</p>
+				</div>
+				<div class="client-info">
+					<div class="client-name colored-text strong">
+						Willeke Hoekstra
+					</div>
+					<div class="company">
+						AbZ Network
+					</div>
+				</div>
+			</div>
+			
+			<!-- SINGLE FEEDBACK -->
+			<div class="single-feedback">
+				<div class="client-pic">
+					<img src="images/client-pics/2.jpg" alt="">
+				</div>
+				<div class="box">
+					<p class="message">
+						 Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding.
+					</p>
+				</div>
+				<div class="client-info">
+					<div class="client-name colored-text strong">
+						Răducu Neamțu
+					</div>
+					<div class="company">
+						AbZ Network
+					</div>
+				</div>
+			</div>
+			
+			<!-- SINGLE FEEDBACK -->
+			<div class="single-feedback">
+				<div class="client-pic">
+					<img src="images/client-pics/3.jpg" alt="">
+				</div>
+				<div class="box">
+					<p class="message">
+						 Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding.
+					</p>
+				</div>
+				<div class="client-info">
+					<div class="client-name colored-text strong">
+						Markel Díaz
+					</div>
+					<div class="company">
+						AbZ Network
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div> <!-- /END TESTIMONIALS -->
+	
+</div>  <!-- /END CONTAINER -->
+
+</section>
 
 
-    {%endblock%}
+<!-- =========================
+     SECTION 8 - CTA  
+============================== -->
+<section class="cta-section" id="section8">
+<div class="color-overlay">
+	
+	<div class="container">
+		
+		<h4>We Are Ready to Help You</h4>
+		<h2>Get the Best Solution for Your Business</h2>
+		<div id="cta-4">
+			<a href="#home" class="btn standard-button"> Get Started</a>
+		</div>
+		
+		<!-- MAILCHIMP SUBSCRIBE FORM -->
+		
+		<div class="subscribe-section">
+			
+			<h3>Or, Mailchimp Subscription Form</h3>
+			
+			<form class="subscription-form mailchimp form-inline" role="form">
+				
+				<!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+				<h6 class="subscription-success"></h6>
+				<h6 class="subscription-error"></h6>
+				
+				<!-- EMAIL INPUT BOX -->
+				<input type="email" name="email" id="subscriber-email" placeholder="Your Email" class="form-control input-box">
+				
+				<!-- SUBSCRIBE BUTTON -->
+				<button type="submit" id="subscribe-button" class="btn standard-button">Subscribe</button>
+				
+			</form>
+		</div>
+		<!-- /END SUBSCRIPTION FORM -->
+		
+	</div>  <!-- /END CONTAINER -->
+</div>  <!-- /END COLOR OVERLAY -->
+
+</section>
+
+<!-- =========================
+     SECTION 9 - CONTACT US  
+============================== -->
+<section class="contact-us" id="section9">
+<div class="container">
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<h3 class="heading">Need any help? Contact us now!</h3>
+			
+			<a href="" class="contact-link expand-form"><span class="icon_mail_alt"></span>Contact us now</a>
+			
+			<!-- EXPANDED CONTACT FORM -->
+			<div class="expanded-contact-form">
+				
+				<!-- FORM -->
+				<form class="contact-form" id="contact" role="form">
+					
+					<!-- IF MAIL SENT SUCCESSFULLY -->
+					<h6 class="success">
+					<span class="olored-text icon_check"></span> Your message has been sent successfully. </h6>
+					
+					<!-- IF MAIL SENDING UNSUCCESSFULL -->
+					<h6 class="error">
+					<span class="colored-text icon_error-circle_alt"></span> E-mail must be valid and message must be longer than 1 character. </h6>
+					
+					<div class="field-wrapper col-md-6">
+						<input class="form-control input-box" id="cf-name" type="text" name="cf-name" placeholder="Your Name">
+					</div>
+					
+					<div class="field-wrapper col-md-6">
+						<input class="form-control input-box" id="cf-email" type="email" name="cf-email" placeholder="Email">
+					</div>
+					
+					<div class="field-wrapper col-md-12">
+						<input class="form-control input-box" id="cf-subject" type="text" name="cf-subject" placeholder="Subject">
+					</div>
+					
+					<div class="field-wrapper col-md-12">
+						<textarea class="form-control textarea-box" id="cf-message" rows="7" name="cf-message" placeholder="Your Message"></textarea>
+					</div>
+					
+					<button class="btn standard-button" type="submit" id="cf-submit" name="submit" data-style="expand-left">Send Message</button>
+				</form>
+				<!-- /END FORM -->
+			</div>
+			
+		</div>
+	</div>
+	
+</div>
+
+</section>
 
 
-    
-    </div> <!-- End Container -->
 
 
-    
-
-    <!-- Footer Area
-        ================================================== -->
-
-	<div class="footer-container"><!-- Begin Footer -->
-    	<div class="container">
-        	<div class="row footer-row">
-                <div class="col-lg-3 footer-col">
-                   <h5>    CONTACT US</h5>
-                      <ul class="social-icons">
-                        <li><a href="#" class="social-icon facebook"></a></li>
-                        <li><a href="#" class="social-icon twitter"></a></li>
-                        <li><a href="#" class="social-icon dribble"></a></li>
-                        <li><a href="#" class="social-icon rss"></a></li>
-                        <li><a href="#" class="social-icon forrst"></a></li>
-
-                    </ul>
-                    <p><br><br></p>
-
-                     <p>
-                       &nbsp;&nbsp;&nbsp;If you are an alumni of CET, and you passed out in the year 2000 or before, you can join CETAA for Free ! Others will be added automatically.
-                    </p>
-
-                    <p><a href="#">MEMBER SEARCH</a></p>
-                    <p><a href="#">ONLINE REGISTRATION</a></p>
-                </div>
-                
-                <div class="col-lg-6 footer-col">
-                    <h5>B2C Programs</h5>
-                     <ul class="post-list">
-                        <li><a href="#">Sankar Krishnan</a></li>
-                        <li>Interactive Session by EETTOOS</li>
-                         <li>Er. Jay Chacko </li>
-                         <li>Manoj Vasudevan </li>
-                         <li>Dr Biji Kurup </li>
-                         <li>Er. K. Raghavan </li>
-                         <li>Capt. A. Muhammed Riyas </li>
-                         <li>Dr. Sriram Ganapathy  </li>                       
-                    </ul>
-                </div>
-                <div class="col-lg-3 footer-col">
-                    <h5>Gallery</h5>
-                    <ul class="img-feed">
-                        <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-                        <li><a href="#"><img src="{% static "public/" %}img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
-      
-      
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row"><!-- Begin Sub Footer -->
-               
-            </div><!-- End Sub Footer -->
-
-        </div>
-    </div><!-- End Footer --> 
-    
-    <!-- Scroll to Top -->  
-    <div id="toTop" class="hidden-xs hidden-sm">Back to Top</div>
+{%endblock%}
 
 
 
-    <script type="text/javascript">
-    $(document).ready(function () {
 
-        $("#btn-blog-next").click(function () {
-          $('#blogCarousel').carousel('next')
-        });
-         $("#btn-blog-prev").click(function () {
-          $('#blogCarousel').carousel('prev')
-        });
 
-         $("#btn-client-next").click(function () {
-          $('#clientCarousel').carousel('next')
-        });
-         $("#btn-client-prev").click(function () {
-          $('#clientCarousel').carousel('prev')
-        });
-        
-    });
+<!-- =========================
+     SECTION 10 - FOOTER 
+============================== -->
+<footer class="bgcolor-2">
+<div class="container">
+	
+	<div class="footer-logo">
+		<img src="images/logo-dark.png" alt="">
+	</div>
+	
+	<div class="copyright">
+		 ©2014 LandX Template LLC.
+	</div>
+	
+	<ul class="social-icons">
+		<li><a href=""><span class="social_facebook_square"></span></a></li>
+		<li><a href=""><span class="social_twitter_square"></span></a></li>
+		<li><a href=""><span class="social_pinterest_square"></span></a></li>
+		<li><a href=""><span class="social_googleplus_square"></span></a></li>
+		<li><a href=""><span class="social_instagram_square"></span></a></li>
+		<li><a href=""><span class="social_linkedin_square"></span></a></li>
+	</ul>
+	
+</div>
+</footer>
 
-     $(window).load(function(){
 
-        $('.flexslider').flexslider({
-            animation: "slide",
-            slideshow: true,
-            start: function(slider){
-              $('body').removeClass('loading');
-            }
-        });  
-    });
+<!-- =========================
+     SCRIPTS   
+============================== -->
+<script src="assets/public/js/jquery.min.js"></script>
 
-    </script>
-    
+<script>
+/* =================================
+   LOADER                     
+=================================== */
+// makes sure the whole site is loaded
+jQuery(window).load(function() {
+	"use strict";
+        // will first fade out the loading animation
+	jQuery(".status").fadeOut();
+        // will fade out the whole DIV that covers the website.
+	jQuery(".preloader").delay(1000).fadeOut("slow");
+})
+
+</script>
+
+<script src="assets/public/js/bootstrap.min.js"></script>
+<script src="assets/public/js/retina-1.1.0.min.js"></script>
+<script src="assets/public/js/smoothscroll.js"></script>
+<script src="assets/public/js/jquery.scrollTo.min.js"></script>
+<script src="assets/public/js/jquery.localScroll.min.js"></script>
+<script src="assets/public/js/owl.carousel.min.js"></script>
+<script src="assets/public/js/nivo-lightbox.min.js"></script>
+<script src="assets/public/js/simple-expand.min.js"></script>
+<script src="assets/public/js/jquery.nav.js"></script>
+<script src="assets/public/js/jquery.fitvids.js"></script>
+<script src="assets/public/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/public/js/custom.js"></script>
+<!-- ****************
+      After neccessary customization/modification, Please minify JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
+     **************** -->
 </body>
 </html>

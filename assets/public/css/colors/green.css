@@ -1,0 +1,83 @@
+/* --------------------------------------
+=========================================
+COLOR : GREEN 
+
+MAIN COLOR CODE: #00ab66
+
+DEEP COLOR CODE: #01995c
+=========================================
+----------------------------------------- */
+.colored-line {
+  background: #00ab66;
+}
+.colored-text {
+  color: #00ab66 !important;
+}
+.color-bg {
+  background: #00ab66;
+}
+a {
+  color: #00ab66;
+}
+.non-sticky .navbar-nav > li > a:hover {
+  color: #00ab66;
+}
+.standard-button {
+  background: #00ab66;
+  color: #ffffff;
+}
+.standard-button:hover {
+  color: #ffffff;
+  background: #01995c;
+}
+.secondary-button:hover {
+  color: #00ab66;
+  border-color: #00ab66;
+}
+.sticky-navigation .main-navigation .current a {
+  color: #00ab66 !important;
+}
+.sticky-navigation .navbar-nav > li > a:hover {
+  color: #00ab66;
+}
+.feature-list-1 li .icon-container {
+  background: #00ab66;
+}
+.feature-list-2 li .icon-container {
+  background: #00ab66;
+}
+.feature .icon {
+  color: #00ab66;
+}
+.vertical-registration-form .input-box {
+  border-top: 1px solid rgba(0, 171, 102, 0.4);
+  border-bottom: 1px solid rgba(0, 171, 102, 0.4);
+  border-right: 1px solid rgba(0, 171, 102, 0.4);
+  border-left: 3px solid #00ab66;
+}
+.vertical-registration-form .input-box:focus,
+.vertical-registration-form .input-box:active {
+  border-color: #00ab66;
+}
+.subscription-form .input-box:focus,
+.subscription-form .input-box:active {
+  border-left: 3px solid #00ab66 !important;
+}
+.input-box:active,
+.textarea-box:active,
+.input-box:focus,
+.textarea-box:focus {
+  border-left: 3px solid #00ab66 !important;
+}
+.screenshots .owl-theme .owl-controls .owl-page span {
+  background: #00ab66;
+}
+.contact-link {
+  color: #00ab66;
+}
+.contact-link:hover {
+  color: #01995c;
+}
+.social-icons li a:hover {
+  color: #00ab66;
+}
