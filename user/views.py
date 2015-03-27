@@ -13,7 +13,10 @@ def index(request):
 	else:
 		if(not check):
 			return HttpResponseRedirect('/login')
-	data = {'title':'My Account'}
+	u=User.objects.all().get(id=request.session['u_id'])
+	posts=Post.objects.all().filter(uid=u)
+	data = {'title':'My Account','user':u,'posts':posts}
+	print(data)
 	return render(request,'front/user/account.html',data)
 
 

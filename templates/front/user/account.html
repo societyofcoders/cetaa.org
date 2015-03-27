@@ -20,6 +20,33 @@
 			<li><a href="view">View My Posts</a></li>
 		</ul>
 	</div>
+	<div>
+
+		<h3>User Info</h3>
+		<ul>
+			<li>{{user.fname}}</a></li>
+			<li>{{user.lname}}</a></li>
+		</ul>
+	</div>
+	{% for post in posts %}
+
+
+                 <!-- Blog Item 1 -->
+                <div class="item {% if forloop.counter == 1 %} active {%endif%}">
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">{{post.title}}</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on : </strong>{{post.created}}<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link"> {{post.uid}} </a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">photoshop</a>, <a href="#">tutorials</a>, <a href="#">illustration</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+
+
+             {%endfor%}
 
 </div>
 
