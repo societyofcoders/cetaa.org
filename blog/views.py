@@ -14,3 +14,12 @@ def index(request):
 
 
 	return render(request,'front/blog/index.html',{'title':'Articles','data':data})
+
+def article(request,slug):
+
+	try:
+		post = Post.objects.get(slug=slug)
+		return render(request,'front/blog/article.html',{'title':slug,'post':post})
+
+	except Exception, e:
+		return render(request,'404.html',{'title':'not found'})
